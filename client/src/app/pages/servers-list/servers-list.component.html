@@ -1,0 +1,11 @@
+<div class="row p-5">
+  <div
+    class="col-lg-3 col-md-6 col-12"
+    *ngFor="
+      let server of serversService._servers
+        | filteredServers: serversService._searchInput
+    "
+  >
+    <app-server-card [server]="server"></app-server-card>
+  </div>
+</div>
